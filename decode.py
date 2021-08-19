@@ -96,7 +96,7 @@ def decode():
                 if (batch+1) % 100 == 0:
                     tf.logging.info("Number of batch processed: %d." % (batch+1))
 
-        except Exception, e:
+        except Exception as e:
             coord.request_stop(e)
         finally:
             coord.request_stop()

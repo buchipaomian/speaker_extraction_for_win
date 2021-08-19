@@ -1,5 +1,5 @@
 #! /bin/bash
-
+echo "hello world"
 # Copyright 2017
 # Author: Chenglin Xu (NTU, Singapore)
 # Email: xuchenglin28@gmail.com

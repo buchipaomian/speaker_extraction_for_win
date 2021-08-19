@@ -32,7 +32,7 @@ def show_all_variables():
 def run_one_epoch(sess, coord, model, num_batches, is_eval):
     #Train/Eval one epoch of the model on the given data.
     loss = 0.0
-    for batch in xrange(num_batches):
+    for batch in range(num_batches):
         if coord.should_stop():
             break
         if is_eval:
@@ -149,7 +149,7 @@ def train():
                     else:
                         tf.logging.info("The relative improvement is lower than the stopping threshold, stop training at a relative improvement of %f" % rel_impr)
                         break
-        except Exception, e:
+        except Exception as e:
             coord.request_stop(e)
         finally:
             coord.request_stop()
